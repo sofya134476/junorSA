@@ -1,1 +1,84 @@
+1.	Написать пример REST API запроса, который будет вызываться при переходе пользователя на данный экран. 
+
+GET /api/v1/partner-stores?latitude=55.751244&longitude=37.618423&limit=10
+
+2.	Привести пример ответа этого REST API в соответствии с макетом. Формат - JSON. Учесть, что при клике на плашку магазина должен осуществляться переход по ссылке на внешний ресурс.
+{
+  "stores": [
+    {
+      "id": "metro_001",
+      "name": "METRO",
+      "logo_url": "https://cdn.petrushka.ru/partners/metro_logo.png",
+      "delivery_text": "Ближайшая доставка сегодня 21:00–23:00",
+      "delivery_type": "standard",
+      "delivery_slots": [
+        {
+          "date": "2024-10-15",
+          "start_time": "21:00",
+          "end_time": "23:00",
+          "is_soonest": true
+        }
+      ],
+      "external_link": "https://partners.petrushka.ru/redirect/metro?store_id=001&user_id={USER_ID}",
+      "distance_km": 2.3,
+      "sort_order": 1
+    },
+    {
+      "id": "ashan_045",
+      "name": "Ашан",
+      "logo_url": "https://cdn.petrushka.ru/partners/ashan_logo.png",
+      "delivery_text": "Ближайшая доставка сегодня 18:00–20:00",
+      "delivery_type": "standard",
+      "delivery_slots": [
+        {
+          "date": "2024-10-15",
+          "start_time": "18:00",
+          "end_time": "20:00",
+          "is_soonest": true
+        }
+      ],
+      "external_link": "https://partners.petrushka.ru/redirect/ashan?store_id=045&user_id={USER_ID}",
+      "distance_km": 1.8,
+      "sort_order": 2
+    },
+    {
+      "id": "vkusvill_112",
+      "name": "ВкусВилл",
+      "logo_url": "https://cdn.petrushka.ru/partners/vkusvill_logo.png",
+      "delivery_text": "Быстрая доставка от 20 до 60 минут",
+      "delivery_type": "express",
+      "fast_delivery_min": 20,
+      "fast_delivery_max": 60,
+      "external_link": "https://partners.petrushka.ru/redirect/vkusvill?store_id=112&user_id={USER_ID}",
+      "distance_km": 0.5,
+      "sort_order": 3
+    },
+    {
+      "id": "viktorija_078",
+      "name": "ВИКТОРИЯ",
+      "logo_url": "https://cdn.petrushka.ru/partners/viktorija_logo.png",
+      "delivery_text": "Ближайшая доставка сегодня 17:00–19:00",
+      "delivery_type": "standard",
+      "delivery_slots": [
+        {
+          "date": "2024-10-15",
+          "start_time": "17:00",
+          "end_time": "19:00",
+          "is_soonest": true
+        }
+      ],
+      "external_link": "https://partners.petrushka.ru/redirect/viktorija?store_id=078&user_id={USER_ID}",
+      "distance_km": 3.1,
+      "sort_order": 4
+    }
+  ],
+  "metadata": {
+    "user_coordinates": {
+      "latitude": 55.751244,
+      "longitude": 37.618423
+    },
+    "generated_at": "2024-10-15T14:30:00Z",
+    "total_count": 4
+  }
+}
 
